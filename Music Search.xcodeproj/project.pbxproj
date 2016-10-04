@@ -193,6 +193,11 @@
 				TargetAttributes = {
 					1F92C7BB1D2D776D0053D167 = {
 						CreatedOnToolsVersion = 7.3.1;
+						SystemCapabilities = {
+							com.apple.Maps.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					1F92C7CF1D2D776D0053D167 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -484,6 +489,7 @@
 				1F92C7E61D2D776E0053D167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F92C7E71D2D776E0053D167 /* Build configuration list for PBXNativeTarget "Music SearchTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +498,7 @@
 				1F92C7E91D2D776E0053D167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1F92C7EA1D2D776E0053D167 /* Build configuration list for PBXNativeTarget "Music SearchUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +507,7 @@
 				1F92C7EC1D2D776E0053D167 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
