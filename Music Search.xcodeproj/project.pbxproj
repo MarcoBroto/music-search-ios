@@ -14,6 +14,7 @@
 		1F92C7CA1D2D776D0053D167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */; };
 		1F92C7D51D2D776D0053D167 /* Music_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7D41D2D776D0053D167 /* Music_SearchTests.swift */; };
 		1F92C7E01D2D776E0053D167 /* Music_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */; };
+		1FC587991DA38F4B00A2B8C6 /* ResultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FC587981DA38F4B00A2B8C6 /* ResultView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		1F92C7DB1D2D776D0053D167 /* Music SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SearchUITests.swift; sourceTree = "<group>"; };
 		1F92C7E11D2D776E0053D167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FC587981DA38F4B00A2B8C6 /* ResultView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */,
 				1F92C7C11D2D776D0053D167 /* ViewController.swift */,
+				1FC587981DA38F4B00A2B8C6 /* ResultView.swift */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
 				1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */,
@@ -266,6 +269,7 @@
 			files = (
 				1F92C7C21D2D776D0053D167 /* ViewController.swift in Sources */,
 				1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */,
+				1FC587991DA38F4B00A2B8C6 /* ResultView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
