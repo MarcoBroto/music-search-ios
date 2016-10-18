@@ -31,8 +31,8 @@ class ResultsTableViewController: UITableViewController {
         let cell = Bundle.main.loadNibNamed("ResultTableViewCell", owner: self, options: nil)?.first as! ResultTableViewCell
         cell.mainImageView.image = resultsData[indexPath.row].image
         cell.songLabel.text = resultsData[indexPath.row].song
-        cell.artistLabel.text = resultsData[indexPath.row].artist
-        cell.albumlLabel.text = resultsData[indexPath.row].album
+//        cell.artistLabel.text = resultsData[indexPath.row].artist
+//        cell.albumlLabel.text = resultsData[indexPath.row].album
         return cell
     }
     

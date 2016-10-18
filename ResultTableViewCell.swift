@@ -8,15 +8,12 @@
 
 import UIKit
 
-@IBDesignable
 class ResultTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var songLabel: UILabel!
-    @IBOutlet weak var artistLabel: UILabel!
-    @IBOutlet weak var albumlLabel: UILabel!
-    @IBOutlet weak var durationLabel: UILabel!
-    @IBOutlet weak var dataUsageLabel: UILabel!
+//    @IBOutlet weak var artistLabel: UILabel!
+//    @IBOutlet weak var albumlLabel: UILabel!
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
