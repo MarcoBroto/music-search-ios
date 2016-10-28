@@ -12,8 +12,8 @@ class ResultTableViewCell: UITableViewCell {
     
     @IBOutlet weak var mainImageView: UIImageView!
     @IBOutlet weak var songLabel: UILabel!
-//    @IBOutlet weak var artistLabel: UILabel!
-//    @IBOutlet weak var albumlLabel: UILabel!
+    @IBOutlet weak var artistLabel: UILabel!
+    @IBOutlet weak var albumLabel: UILabel!
     
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
