@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Alamofire
 
 struct CellData {
     var song: String!
@@ -45,6 +46,17 @@ class ResultsTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 145
     }
-
+    
+    public func requestURL() -> URLRequest{
+        let query = "query"
+        let queryLimit = 20
+        let queryURL:URL = URL(fileURLWithPath: "https://api.spotify.com/v1/search?q=\(query)&type=track,artist,album&limit=\(queryLimit)")
+        let queryRequest = URLRequest(url: queryURL)
+        return queryRequest
+    }
+    
+    public func parseData(request: URLRequest) {
+        
+    }
 }
 
