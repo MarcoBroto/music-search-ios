@@ -17,10 +17,12 @@ struct CellData {
 }
 
 class ResultsTableViewController: UITableViewController {
+    typealias JSONStandard = [String: AnyObject]
     
     var resultsData = [CellData]()
 
     override func viewDidLoad() {
+        callAlamo(url: generateURL(query: "Drake"))
         resultsData = [CellData(song: "Thief", artist: "Ookay", album:"N/A", image: #imageLiteral(resourceName: "ImagePlaceholder")),
         CellData(song: "Wicked", artist: "Griz", album:"Good Times Roll", image: #imageLiteral(resourceName: "ImagePlaceholder")),
         CellData(song: "Hotline Bling", artist: "Drake", album:"Views", image: #imageLiteral(resourceName: "ImagePlaceholder"))]
@@ -47,16 +49,38 @@ class ResultsTableViewController: UITableViewController {
         return 145
     }
     
-    public func requestURL() -> URLRequest{
-        let query = "query"
-        let queryLimit = 20
-        let queryURL:URL = URL(fileURLWithPath: "https://api.spotify.com/v1/search?q=\(query)&type=track,artist,album&limit=\(queryLimit)")
-        let queryRequest = URLRequest(url: queryURL)
-        return queryRequest
+    func generateURL(query: String) -> String {
+//        let queryLimit = 20
+//        let queryURL:URL = URL(fileURLWithPath: "https://api.spotify.com/v1/search?q=\(query)&type=track,artist,album&limit=\(queryLimit)")
+        let q = "https://api.spotify.com/v1/search?q=Drake&type=track,artist,album&limit=20"
+        return q
     }
     
-    public func parseData(request: URLRequest) {
-        
+    func callAlamo(url: String) {
+        Alamofire.request(url).responseJSON(completionHandler: {
+            response in
+            
+            self.parseData(JSONData: response.data!)
+        })
+    }
+    
+    func parseData(JSONData: Data) {
+        do {
+            let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
+            print(readableJSON)
+            
+            if let tracks = readableJSON["tracks"] {
+                if let items  = tracks["items"] {
+                    if let item = items.album {
+                        
+                    }
+                }
+            }
+            
+        }
+        catch {
+            print(error)
+        }
     }
 }
 
