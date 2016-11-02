@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		053D5C1A1DC9D29500942DD5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D5C191DC9D29500942DD5 /* SettingsViewController.swift */; };
 		05B65C231DC9BF54003B311B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B65C221DC9BF54003B311B /* HomeViewController.swift */; };
 		1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */; };
 		1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */; };
@@ -41,6 +42,7 @@
 
 /* Begin PBXFileReference section */
 		0153667750E96F1DF21C9805 /* Pods-Music SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		053D5C191DC9D29500942DD5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		05B65C221DC9BF54003B311B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = ../ResultTableViewCell.swift; sourceTree = "<group>"; };
 		1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = ../ResultTableViewCell.xib; sourceTree = "<group>"; };
@@ -127,6 +129,7 @@
 				05B65C221DC9BF54003B311B /* HomeViewController.swift */,
 				1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
+				053D5C191DC9D29500942DD5 /* SettingsViewController.swift */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
 				1F92C7CB1D2D776D0053D167 /* Info.plist */,
 			);
@@ -464,6 +467,7 @@
 				1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */,
 				1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */,
 				1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */,
+				053D5C1A1DC9D29500942DD5 /* SettingsViewController.swift in Sources */,
 				05B65C231DC9BF54003B311B /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
