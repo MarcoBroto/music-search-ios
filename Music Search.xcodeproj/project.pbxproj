@@ -7,28 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-<<<<<<< HEAD
 		1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */; };
 		1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */; };
 		1F2E62F41DA4509400DEFE3D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E62F31DA4509400DEFE3D /* View.xib */; };
-=======
-		17B27C15904FDD00F21B9AC9 /* Pods_Music_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C086BACA41C894258E79F53E /* Pods_Music_SearchTests.framework */; };
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 		1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */; };
-		1F92C7C21D2D776D0053D167 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7C11D2D776D0053D167 /* ViewController.swift */; };
+		1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */; };
 		1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C31D2D776D0053D167 /* Main.storyboard */; };
 		1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C61D2D776D0053D167 /* Assets.xcassets */; };
 		1F92C7CA1D2D776D0053D167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */; };
 		1F92C7D51D2D776D0053D167 /* Music_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7D41D2D776D0053D167 /* Music_SearchTests.swift */; };
 		1F92C7E01D2D776E0053D167 /* Music_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */; };
-<<<<<<< HEAD
 		2E50CE24A3BC16C7048757B4 /* Pods_Music_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44DF1DB7C65CB98ADFB43BE /* Pods_Music_Search.framework */; };
 		AFA663A281294AFF3B0C78C7 /* Pods_Music_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F246A7E3CE1AF6C4749785 /* Pods_Music_SearchTests.framework */; };
 		BD5CBACB9200E92850AC320B /* Pods_Music_SearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23215111F642463127B247F9 /* Pods_Music_SearchUITests.framework */; };
-=======
-		D5CE3DB853D77BC65263B22A /* Pods_Music_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A878D4D4597B178C0745F4C7 /* Pods_Music_Search.framework */; };
-		F209AF80D40D8B12516CC686 /* Pods_Music_SearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2E8A4FD33E16D73C583F192F /* Pods_Music_SearchUITests.framework */; };
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,9 +40,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0153667750E96F1DF21C9805 /* Pods-Music SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = ../ResultTableViewCell.swift; sourceTree = "<group>"; };
+		1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = ../ResultTableViewCell.xib; sourceTree = "<group>"; };
+		1F2E62F31DA4509400DEFE3D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		1F92C7BC1D2D776D0053D167 /* Music Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		1F92C7C11D2D776D0053D167 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		1F92C7C41D2D776D0053D167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F92C7C61D2D776D0053D167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1F92C7C91D2D776D0053D167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -62,7 +57,6 @@
 		1F92C7DB1D2D776D0053D167 /* Music SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SearchUITests.swift; sourceTree = "<group>"; };
 		1F92C7E11D2D776E0053D167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-<<<<<<< HEAD
 		23215111F642463127B247F9 /* Pods_Music_SearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_SearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F246A7E3CE1AF6C4749785 /* Pods_Music_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A437E0A0D22B527F21BCBB /* Pods-Music SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -71,17 +65,6 @@
 		9758AF14D5697E82AA052E93 /* Pods-Music SearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests.debug.xcconfig"; sourceTree = "<group>"; };
 		B5215E92C08AD9FA783E3BAC /* Pods-Music SearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.release.xcconfig"; sourceTree = "<group>"; };
 		E44DF1DB7C65CB98ADFB43BE /* Pods_Music_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-=======
-		2E8A4FD33E16D73C583F192F /* Pods_Music_SearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_SearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		328B043AE3FF79FE756EC709 /* Pods-Music SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		48D219AD92DDDF39A5608312 /* Pods-Music Search.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Search.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music Search/Pods-Music Search.debug.xcconfig"; sourceTree = "<group>"; };
-		600B8D77178D272A20351B6D /* Pods-Music Search.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music Search.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music Search/Pods-Music Search.release.xcconfig"; sourceTree = "<group>"; };
-		A878D4D4597B178C0745F4C7 /* Pods_Music_Search.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_Search.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		BCF26DA6D6434F82D0166822 /* Pods-Music SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests.release.xcconfig"; sourceTree = "<group>"; };
-		C086BACA41C894258E79F53E /* Pods_Music_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C589A252154969130507F5C1 /* Pods-Music SearchTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests.debug.xcconfig"; sourceTree = "<group>"; };
-		FB3474B2D2FF4591E4C49385 /* Pods-Music SearchUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.release.xcconfig"; sourceTree = "<group>"; };
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,11 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				2E50CE24A3BC16C7048757B4 /* Pods_Music_Search.framework in Frameworks */,
-=======
-				D5CE3DB853D77BC65263B22A /* Pods_Music_Search.framework in Frameworks */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -101,11 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				AFA663A281294AFF3B0C78C7 /* Pods_Music_SearchTests.framework in Frameworks */,
-=======
-				17B27C15904FDD00F21B9AC9 /* Pods_Music_SearchTests.framework in Frameworks */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -113,11 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-<<<<<<< HEAD
 				BD5CBACB9200E92850AC320B /* Pods_Music_SearchUITests.framework in Frameworks */,
-=======
-				F209AF80D40D8B12516CC686 /* Pods_Music_SearchUITests.framework in Frameworks */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,17 +98,13 @@
 		1F92C7B31D2D776D0053D167 = {
 			isa = PBXGroup;
 			children = (
+				1F2E62F31DA4509400DEFE3D /* View.xib */,
 				1F92C7BE1D2D776D0053D167 /* Music Search */,
 				1F92C7D31D2D776D0053D167 /* Music SearchTests */,
 				1F92C7DE1D2D776D0053D167 /* Music SearchUITests */,
 				1F92C7BD1D2D776D0053D167 /* Products */,
-<<<<<<< HEAD
 				36FD688D393BDB475CA7E981 /* Pods */,
 				215BBA40A7EEAF44EE0F4347 /* Frameworks */,
-=======
-				5728ABFFECDB3DF50800F2C7 /* Pods */,
-				66A05824B7B9F83C38D84896 /* Frameworks */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			sourceTree = "<group>";
 		};
@@ -155,7 +122,9 @@
 			isa = PBXGroup;
 			children = (
 				1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */,
-				1F92C7C11D2D776D0053D167 /* ViewController.swift */,
+				1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */,
+				1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */,
+				1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
 				1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */,
@@ -182,7 +151,6 @@
 			path = "Music SearchUITests";
 			sourceTree = "<group>";
 		};
-<<<<<<< HEAD
 		215BBA40A7EEAF44EE0F4347 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -204,29 +172,6 @@
 				B5215E92C08AD9FA783E3BAC /* Pods-Music SearchUITests.release.xcconfig */,
 			);
 			name = Pods;
-=======
-		5728ABFFECDB3DF50800F2C7 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				48D219AD92DDDF39A5608312 /* Pods-Music Search.debug.xcconfig */,
-				600B8D77178D272A20351B6D /* Pods-Music Search.release.xcconfig */,
-				C589A252154969130507F5C1 /* Pods-Music SearchTests.debug.xcconfig */,
-				BCF26DA6D6434F82D0166822 /* Pods-Music SearchTests.release.xcconfig */,
-				328B043AE3FF79FE756EC709 /* Pods-Music SearchUITests.debug.xcconfig */,
-				FB3474B2D2FF4591E4C49385 /* Pods-Music SearchUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		66A05824B7B9F83C38D84896 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				A878D4D4597B178C0745F4C7 /* Pods_Music_Search.framework */,
-				C086BACA41C894258E79F53E /* Pods_Music_SearchTests.framework */,
-				2E8A4FD33E16D73C583F192F /* Pods_Music_SearchUITests.framework */,
-			);
-			name = Frameworks;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -236,21 +181,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F92C7E41D2D776E0053D167 /* Build configuration list for PBXNativeTarget "Music Search" */;
 			buildPhases = (
-<<<<<<< HEAD
 				DEB73A35E83DA1A03169C4C5 /* [CP] Check Pods Manifest.lock */,
 				1F92C7B81D2D776D0053D167 /* Sources */,
 				1F92C7B91D2D776D0053D167 /* Frameworks */,
 				1F92C7BA1D2D776D0053D167 /* Resources */,
 				171E1E144B5A2695B850594E /* [CP] Embed Pods Frameworks */,
 				F646758A988F1E65CC8A1155 /* [CP] Copy Pods Resources */,
-=======
-				6B25030A8A5A888FDF49DF36 /* [CP] Check Pods Manifest.lock */,
-				1F92C7B81D2D776D0053D167 /* Sources */,
-				1F92C7B91D2D776D0053D167 /* Frameworks */,
-				1F92C7BA1D2D776D0053D167 /* Resources */,
-				536EFAEE202264849E0871BD /* [CP] Embed Pods Frameworks */,
-				27C1854689D2BF09EE5772A6 /* [CP] Copy Pods Resources */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			buildRules = (
 			);
@@ -265,21 +201,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F92C7E71D2D776E0053D167 /* Build configuration list for PBXNativeTarget "Music SearchTests" */;
 			buildPhases = (
-<<<<<<< HEAD
 				4DD13CF28614DDEDDA01C17E /* [CP] Check Pods Manifest.lock */,
 				1F92C7CC1D2D776D0053D167 /* Sources */,
 				1F92C7CD1D2D776D0053D167 /* Frameworks */,
 				1F92C7CE1D2D776D0053D167 /* Resources */,
 				854FBF74C60830A27EF25C2F /* [CP] Embed Pods Frameworks */,
 				58C9100D16EBC9DC9BF2E496 /* [CP] Copy Pods Resources */,
-=======
-				296094B27330AC21A470BE44 /* [CP] Check Pods Manifest.lock */,
-				1F92C7CC1D2D776D0053D167 /* Sources */,
-				1F92C7CD1D2D776D0053D167 /* Frameworks */,
-				1F92C7CE1D2D776D0053D167 /* Resources */,
-				C0E94A2B062D001DAAC6C309 /* [CP] Embed Pods Frameworks */,
-				261DB6E12E26D431923DAFC8 /* [CP] Copy Pods Resources */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			buildRules = (
 			);
@@ -295,21 +222,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1F92C7EA1D2D776E0053D167 /* Build configuration list for PBXNativeTarget "Music SearchUITests" */;
 			buildPhases = (
-<<<<<<< HEAD
 				A9DD63E10C8055A0F6DC6866 /* [CP] Check Pods Manifest.lock */,
 				1F92C7D71D2D776D0053D167 /* Sources */,
 				1F92C7D81D2D776D0053D167 /* Frameworks */,
 				1F92C7D91D2D776D0053D167 /* Resources */,
 				E9B8A655711CBE165E9134DB /* [CP] Embed Pods Frameworks */,
 				699D687E417CACE67F1C3139 /* [CP] Copy Pods Resources */,
-=======
-				E754637D6C9C85585CD383BE /* [CP] Check Pods Manifest.lock */,
-				1F92C7D71D2D776D0053D167 /* Sources */,
-				1F92C7D81D2D776D0053D167 /* Frameworks */,
-				1F92C7D91D2D776D0053D167 /* Resources */,
-				2B8B68DB32BC336933FE473E /* [CP] Embed Pods Frameworks */,
-				62B172BC9E001E8FDC87108D /* [CP] Copy Pods Resources */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			buildRules = (
 			);
@@ -333,6 +251,7 @@
 				TargetAttributes = {
 					1F92C7BB1D2D776D0053D167 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						SystemCapabilities = {
 							com.apple.Maps.iOS = {
 								enabled = 0;
@@ -341,10 +260,12 @@
 					};
 					1F92C7CF1D2D776D0053D167 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1F92C7BB1D2D776D0053D167;
 					};
 					1F92C7DA1D2D776D0053D167 = {
 						CreatedOnToolsVersion = 7.3.1;
+						LastSwiftMigration = 0800;
 						TestTargetID = 1F92C7BB1D2D776D0053D167;
 					};
 				};
@@ -374,6 +295,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */,
+				1F2E62F41DA4509400DEFE3D /* View.xib in Resources */,
 				1F92C7CA1D2D776D0053D167 /* LaunchScreen.storyboard in Resources */,
 				1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */,
 				1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */,
@@ -397,115 +320,67 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-<<<<<<< HEAD
 		171E1E144B5A2695B850594E /* [CP] Embed Pods Frameworks */ = {
-=======
-		261DB6E12E26D431923DAFC8 /* [CP] Copy Pods Resources */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "[CP] Embed Pods Frameworks";
-=======
-			name = "[CP] Copy Pods Resources";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Search/Pods-Music Search-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		4DD13CF28614DDEDDA01C17E /* [CP] Check Pods Manifest.lock */ = {
-=======
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		27C1854689D2BF09EE5772A6 /* [CP] Copy Pods Resources */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "[CP] Check Pods Manifest.lock";
-=======
-			name = "[CP] Copy Pods Resources";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		58C9100D16EBC9DC9BF2E496 /* [CP] Copy Pods Resources */ = {
-=======
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Search/Pods-Music Search-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		296094B27330AC21A470BE44 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "[CP] Copy Pods Resources";
-=======
-			name = "[CP] Check Pods Manifest.lock";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		699D687E417CACE67F1C3139 /* [CP] Copy Pods Resources */ = {
-=======
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		2B8B68DB32BC336933FE473E /* [CP] Embed Pods Frameworks */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "[CP] Copy Pods Resources";
-=======
-			name = "[CP] Embed Pods Frameworks";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		854FBF74C60830A27EF25C2F /* [CP] Embed Pods Frameworks */ = {
-=======
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		536EFAEE202264849E0871BD /* [CP] Embed Pods Frameworks */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -517,43 +392,25 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A9DD63E10C8055A0F6DC6866 /* [CP] Check Pods Manifest.lock */ = {
-=======
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Search/Pods-Music Search-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		62B172BC9E001E8FDC87108D /* [CP] Copy Pods Resources */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "[CP] Check Pods Manifest.lock";
-=======
-			name = "[CP] Copy Pods Resources";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		DEB73A35E83DA1A03169C4C5 /* [CP] Check Pods Manifest.lock */ = {
-=======
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		6B25030A8A5A888FDF49DF36 /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -568,11 +425,7 @@
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
-<<<<<<< HEAD
 		E9B8A655711CBE165E9134DB /* [CP] Embed Pods Frameworks */ = {
-=======
-		C0E94A2B062D001DAAC6C309 /* [CP] Embed Pods Frameworks */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -584,37 +437,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F646758A988F1E65CC8A1155 /* [CP] Copy Pods Resources */ = {
-=======
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		E754637D6C9C85585CD383BE /* [CP] Check Pods Manifest.lock */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
 			);
-<<<<<<< HEAD
 			name = "[CP] Copy Pods Resources";
-=======
-			name = "[CP] Check Pods Manifest.lock";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-<<<<<<< HEAD
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Music Search/Pods-Music Search-resources.sh\"\n";
-=======
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -624,8 +462,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F92C7C21D2D776D0053D167 /* ViewController.swift in Sources */,
+				1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */,
 				1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */,
+				1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -717,7 +556,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -757,7 +596,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -767,98 +606,80 @@
 		};
 		1F92C7E51D2D776E0053D167 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 6A4249A5A9FC13925B2327BA /* Pods-Music Search.debug.xcconfig */;
-=======
-			baseConfigurationReference = 48D219AD92DDDF39A5608312 /* Pods-Music Search.debug.xcconfig */;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Music Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBK.Music-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		1F92C7E61D2D776E0053D167 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 9065C6A0CC4D85DD864E0004 /* Pods-Music Search.release.xcconfig */;
-=======
-			baseConfigurationReference = 600B8D77178D272A20351B6D /* Pods-Music Search.release.xcconfig */;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Music Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBK.Music-Search";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
 		1F92C7E81D2D776E0053D167 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 9758AF14D5697E82AA052E93 /* Pods-Music SearchTests.debug.xcconfig */;
-=======
-			baseConfigurationReference = C589A252154969130507F5C1 /* Pods-Music SearchTests.debug.xcconfig */;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Music SearchTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBK.Music-SearchTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Search.app/Music Search";
 			};
 			name = Debug;
 		};
 		1F92C7E91D2D776E0053D167 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 40A437E0A0D22B527F21BCBB /* Pods-Music SearchTests.release.xcconfig */;
-=======
-			baseConfigurationReference = BCF26DA6D6434F82D0166822 /* Pods-Music SearchTests.release.xcconfig */;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = "Music SearchTests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBK.Music-SearchTests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Music Search.app/Music Search";
 			};
 			name = Release;
 		};
 		1F92C7EB1D2D776E0053D167 /* Debug */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = 0153667750E96F1DF21C9805 /* Pods-Music SearchUITests.debug.xcconfig */;
-=======
-			baseConfigurationReference = 328B043AE3FF79FE756EC709 /* Pods-Music SearchUITests.debug.xcconfig */;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			buildSettings = {
 				INFOPLIST_FILE = "Music SearchUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBK.Music-SearchUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Music Search";
 			};
 			name = Debug;
 		};
 		1F92C7EC1D2D776E0053D167 /* Release */ = {
 			isa = XCBuildConfiguration;
-<<<<<<< HEAD
 			baseConfigurationReference = B5215E92C08AD9FA783E3BAC /* Pods-Music SearchUITests.release.xcconfig */;
-=======
-			baseConfigurationReference = FB3474B2D2FF4591E4C49385 /* Pods-Music SearchUITests.release.xcconfig */;
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			buildSettings = {
 				INFOPLIST_FILE = "Music SearchUITests/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "GBK.Music-SearchUITests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TEST_TARGET_NAME = "Music Search";
 			};
 			name = Release;

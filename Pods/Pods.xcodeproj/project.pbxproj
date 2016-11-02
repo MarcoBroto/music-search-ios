@@ -607,11 +607,7 @@
 			};
 			name = Debug;
 		};
-<<<<<<< HEAD
 		7F93EF234CD87F7448472375CC1EFA96 /* Debug */ = {
-=======
-		847AC160606ECC3E84B2F657A2D4BECB /* Debug */ = {
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */;
 			buildSettings = {
@@ -637,50 +633,13 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-<<<<<<< HEAD
 				SWIFT_VERSION = 3.0;
-=======
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
 			name = Debug;
 		};
-<<<<<<< HEAD
-=======
-		988E37F3E1305805ABC4972267B43DBF /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */;
-			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREFIX_HEADER = "Target Support Files/Alamofire/Alamofire-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/Alamofire/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/Alamofire/Alamofire.modulemap";
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = Alamofire;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 		9EFD9C6D3883A290979238F4E85B1061 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 57CCB6B4889830F00769DD6BD6EAA91A /* Pods-Music Search.debug.xcconfig */;
@@ -787,7 +746,6 @@
 			};
 			name = Debug;
 		};
-<<<<<<< HEAD
 		DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E6F34CCF86067ED508C12C676E298C69 /* Alamofire.xcconfig */;
@@ -820,8 +778,6 @@
 			};
 			name = Release;
 		};
-=======
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 		DDA942618793177D812BF7FE8FCE6D1B /* Release */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = CFCDADA34E29A60694F944E59143E4D8 /* Pods-Music Search.release.xcconfig */;
@@ -912,13 +868,8 @@
 		3CFB42910790CF0BDBCCEBAACD6B9367 /* Build configuration list for PBXNativeTarget "Alamofire" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-<<<<<<< HEAD
 				7F93EF234CD87F7448472375CC1EFA96 /* Debug */,
 				DDA5A606A0B7062DEA5E47CD9FA65A3D /* Release */,
-=======
-				847AC160606ECC3E84B2F657A2D4BECB /* Debug */,
-				988E37F3E1305805ABC4972267B43DBF /* Release */,
->>>>>>> parent of fed00fd... Merged from Marco’s Branch.
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
