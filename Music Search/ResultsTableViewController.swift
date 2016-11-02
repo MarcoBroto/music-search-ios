@@ -17,10 +17,12 @@ struct CellData {
 }
 
 struct ResourceData {
-    var resourceName: String
+    var track: String
+    var artist: String
+    var album: String?
     var resourceID: String
     var resourceImageURL: URL?
-    var playURL: URL?
+    var playbackURL: URL?
     var previewURL: URL?
     var external_url: URL
     var popularity: Int
@@ -53,6 +55,10 @@ class ResultsTableViewController: UITableViewController {
         cell.songLabel.text = resultsData[indexPath.row].song
         cell.artistLabel.text = resultsData[indexPath.row].artist
         cell.albumLabel.text = resultsData[indexPath.row].album
+//        cell.mainImageView.image = resultsData[indexPath.row].image
+//        cell.songLabel.text = resourceArray[indexPath.row].track
+//        cell.artistLabel.text = resourceArray[indexPath.row].artist
+//        cell.albumLabel.text = resourceArray[indexPath.row].album
         return cell
     }
     
@@ -72,6 +78,7 @@ class ResultsTableViewController: UITableViewController {
             response in
             
             self.parseData(JSONData: response.data!)
+            
         })
     }
     
@@ -84,30 +91,31 @@ class ResultsTableViewController: UITableViewController {
                 if let items  = tracks["items"] {
                     for i in 0..<items.count {
                         let item = items[i] as! JSONStandard
-                        
-                        let resourceName = item["name"] as! String
+                        let track = item["name"] as! String
+                        let artist = (item["artists"]![0] as! JSONStandard)["name"] as! String
                         let ID = item["id"] as! String
                         let resourceURL = URL(fileURLWithPath: (item["uri"] as! String))
-                        
-                        var resourceImage: URL?
-                        if let imagesArray = item["images"] {
-                            resourceImage = URL(fileURLWithPath: ((imagesArray[0] as! JSONStandard)["url"] as! String))
-                            print(resourceImage)
-                        }
+                        let album = (item["album"] as! JSONStandard)["name"] as! String
+                        let resourceImages = (item["album"] as! JSONStandard)["images"]!
+                        let image = (resourceImages[0] as! JSONStandard)["url"] as! String
+                        let resourceImage = URL(fileURLWithPath: image)
+//                        if let imagesArray = item["images"] {
+//                            resourceImage = URL(fileURLWithPath: ((imagesArray[0] as! JSONStandard)["url"] as! String))
+//                            resourceImage = nil
+//                            print(resourceImage)
+//                        }
                         
                         let resourcePopularity = item["popularity"] as! Int
                         let previewURL = URL(fileURLWithPath: (item["preview_url"] as! String))
                         let externalURL = URL(fileURLWithPath: ((item["external_urls"] as! JSONStandard)["spotify"] as! String))
                         
-                        self.resourceArray.append(ResourceData(resourceName: resourceName, resourceID: ID, resourceImageURL: resourceImage, playURL: resourceURL, previewURL: previewURL, external_url: externalURL, popularity: resourcePopularity))
-                        print(resourceName)
+                        self.resourceArray.append(ResourceData(track: track, artist: artist, album: album, resourceID: ID, resourceImageURL: resourceImage, playbackURL: resourceURL, previewURL: previewURL, external_url: externalURL, popularity: resourcePopularity))
+                        print(track)
                         print(resourceURL)
                         print(resourcePopularity)
                         print(previewURL)
                         print(externalURL)
-                        if resourceImage == nil {
-                            print("No image returned")
-                        }
+                        
                     }
                 }
             }
