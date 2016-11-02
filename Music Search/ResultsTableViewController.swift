@@ -10,16 +10,27 @@ import UIKit
 import Alamofire
 
 struct CellData {
-    var song: String!
-    var artist: String!
-    var album: String!
-    var image: UIImage!
+    var song: String
+    var artist: String
+    var album: String
+    var image: UIImage
+}
+
+struct ResourceData {
+    var resourceName: String
+    var resourceID: String
+    var resourceImageURL: URL?
+    var playURL: URL?
+    var previewURL: URL?
+    var external_url: URL
+    var popularity: Int
 }
 
 class ResultsTableViewController: UITableViewController {
     typealias JSONStandard = [String: AnyObject]
     
     var resultsData = [CellData]()
+    var resourceArray = [ResourceData]()
 
     override func viewDidLoad() {
         callAlamo(url: generateURL(query: "Drake"))
@@ -69,10 +80,34 @@ class ResultsTableViewController: UITableViewController {
             let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
             print(readableJSON)
             
-            if let tracks = readableJSON["tracks"] {
+            if let tracks = readableJSON["tracks"] as? JSONStandard {
                 if let items  = tracks["items"] {
-                    if let item = items.album {
+                    for i in 0..<items.count {
+                        let item = items[i] as! JSONStandard
                         
+                        let resourceName = item["name"] as! String
+                        let ID = item["id"] as! String
+                        let resourceURL = URL(fileURLWithPath: (item["uri"] as! String))
+                        
+                        var resourceImage: URL?
+                        if let imagesArray = item["images"] {
+                            resourceImage = URL(fileURLWithPath: ((imagesArray[0] as! JSONStandard)["url"] as! String))
+                            print(resourceImage)
+                        }
+                        
+                        let resourcePopularity = item["popularity"] as! Int
+                        let previewURL = URL(fileURLWithPath: (item["preview_url"] as! String))
+                        let externalURL = URL(fileURLWithPath: ((item["external_urls"] as! JSONStandard)["spotify"] as! String))
+                        
+                        self.resourceArray.append(ResourceData(resourceName: resourceName, resourceID: ID, resourceImageURL: resourceImage, playURL: resourceURL, previewURL: previewURL, external_url: externalURL, popularity: resourcePopularity))
+                        print(resourceName)
+                        print(resourceURL)
+                        print(resourcePopularity)
+                        print(previewURL)
+                        print(externalURL)
+                        if resourceImage == nil {
+                            print("No image returned")
+                        }
                     }
                 }
             }
