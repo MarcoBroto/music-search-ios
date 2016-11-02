@@ -124,9 +124,9 @@
 				1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */,
 				1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */,
 				1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */,
+				05B65C221DC9BF54003B311B /* HomeViewController.swift */,
 				1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
-				05B65C221DC9BF54003B311B /* HomeViewController.swift */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
 				1F92C7CB1D2D776D0053D167 /* Info.plist */,
 			);

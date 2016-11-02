@@ -3,7 +3,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -20,51 +19,48 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleAspectFill" translatesAutoresizingMaskIntoConstraints="NO" id="5h4-Ni-sw3">
+                                <subviews>
+                                    <searchBar alpha="0.94999999999999996" contentMode="redraw" placeholder="Start Searching..." showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="srW-bS-rUk">
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <textInputTraits key="textInputTraits" spellCheckingType="yes"/>
+                                    </searchBar>
+                                </subviews>
                                 <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="srW-bS-rUk" firstAttribute="top" secondItem="5h4-Ni-sw3" secondAttribute="top" constant="67" id="9YG-DX-Nzv"/>
+                                    <constraint firstItem="srW-bS-rUk" firstAttribute="centerX" secondItem="5h4-Ni-sw3" secondAttribute="centerX" id="Ft5-bZ-TWb"/>
+                                    <constraint firstAttribute="trailing" secondItem="srW-bS-rUk" secondAttribute="trailing" constant="16" id="PRl-mi-P8w"/>
+                                    <constraint firstItem="srW-bS-rUk" firstAttribute="leading" secondItem="5h4-Ni-sw3" secondAttribute="leading" constant="16" id="d81-jI-BuK"/>
+                                </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MUSIC SEARCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDF-dn-I4i">
+                            <label opaque="NO" userInteractionEnabled="NO" alpha="0.94999999999999996" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="MUSIC SEARCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GDF-dn-I4i">
                                 <frame key="frameInset" minY="20" width="375" height="50"/>
-                                <color key="backgroundColor" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="AvenirNext-BoldItalic" family="Avenir Next" pointSize="30"/>
                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <size key="shadowOffset" width="1" height="4"/>
                             </label>
-                            <searchBar alpha="0.94999999999999996" contentMode="redraw" misplaced="YES" placeholder="Start Searching..." showsSearchResultsButton="YES" translucent="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g03-Qq-QQJ">
-                                <frame key="frameInset" minX="16" minY="70" height="44" maxX="16"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes"/>
-                                <scopeButtonTitles>
-                                    <string>Title</string>
-                                    <string>Title</string>
-                                </scopeButtonTitles>
-                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="GDF-dn-I4i" firstAttribute="centerX" secondItem="WkU-b8-KNG" secondAttribute="centerX" id="1yD-fX-EA7"/>
                             <constraint firstItem="5h4-Ni-sw3" firstAttribute="centerX" secondItem="WkU-b8-KNG" secondAttribute="centerX" id="BFW-pY-aye"/>
                             <constraint firstAttribute="trailing" secondItem="GDF-dn-I4i" secondAttribute="trailing" id="Ko6-nO-cZz"/>
-                            <constraint firstItem="g03-Qq-QQJ" firstAttribute="leading" secondItem="WkU-b8-KNG" secondAttribute="leadingMargin" id="PzK-Z5-KSf"/>
                             <constraint firstItem="GDF-dn-I4i" firstAttribute="leading" secondItem="WkU-b8-KNG" secondAttribute="leading" id="S24-yV-3nd"/>
                             <constraint firstItem="5h4-Ni-sw3" firstAttribute="leading" secondItem="WkU-b8-KNG" secondAttribute="leading" id="VSW-Hc-DSI"/>
                             <constraint firstItem="l1N-HP-LlZ" firstAttribute="top" secondItem="5h4-Ni-sw3" secondAttribute="bottom" id="XIJ-no-V90"/>
-                            <constraint firstItem="g03-Qq-QQJ" firstAttribute="trailing" secondItem="WkU-b8-KNG" secondAttribute="trailingMargin" id="a27-AH-dPC"/>
                             <constraint firstAttribute="trailing" secondItem="5h4-Ni-sw3" secondAttribute="trailing" id="dtj-mO-yXJ"/>
                             <constraint firstItem="5h4-Ni-sw3" firstAttribute="top" secondItem="WkU-b8-KNG" secondAttribute="top" id="eLJ-EY-Zsa"/>
-                            <constraint firstItem="g03-Qq-QQJ" firstAttribute="top" secondItem="GDF-dn-I4i" secondAttribute="bottom" id="fUY-HY-D6k"/>
                             <constraint firstItem="5h4-Ni-sw3" firstAttribute="centerY" secondItem="WkU-b8-KNG" secondAttribute="centerY" id="hsr-kB-LUE"/>
                             <constraint firstItem="GDF-dn-I4i" firstAttribute="top" secondItem="Mjv-ZE-kA4" secondAttribute="bottom" id="t6n-XS-jlv"/>
-                            <constraint firstItem="g03-Qq-QQJ" firstAttribute="centerX" secondItem="WkU-b8-KNG" secondAttribute="centerX" id="tHc-2H-gps"/>
                         </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UBq-X5-BhD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="180" y="-9.4452773613193415"/>
+            <point key="canvasLocation" x="56.799999999999997" y="-96.7016491754123"/>
         </scene>
     </scenes>
 </document>
