@@ -1,38 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="RWt-mD-zO6">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="0li-6V-ggb">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Results Table View Controller-->
-        <scene sceneID="NnN-cP-xV5">
+        <!--Home Page View Controller-->
+        <scene sceneID="CU8-wm-Njf">
             <objects>
-                <tableViewController id="RWt-mD-zO6" customClass="ResultsTableViewController" customModule="Music_Search" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="ufn-yh-adk">
+                <viewController id="0li-6V-ggb" customClass="HomePageViewController" customModule="Music_Search" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Fmd-Tn-zrT"/>
+                        <viewControllerLayoutGuide type="bottom" id="bw6-fx-Mbe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2sz-Y0-9Xb">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" alpha="0.90000000000000002" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="6kk-S0-9Mv">
+                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="667" id="9Gx-xa-UPw"/>
+                                    <constraint firstAttribute="width" constant="375" id="bkI-QF-DOt"/>
+                                </constraints>
+                            </imageView>
+                            <searchBar alpha="0.80000000000000004" contentMode="redraw" barStyle="black" placeholder="Start Searching..." translatesAutoresizingMaskIntoConstraints="NO" id="gcA-l2-bEr">
+                                <color key="barTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="yes" spellCheckingType="yes" keyboardAppearance="alert"/>
+                            </searchBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MUSIC SEARCH" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P2K-4P-2U2">
+                                <color key="backgroundColor" red="0.49803921579999999" green="0.49803921579999999" blue="0.49803921579999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="30"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="XnL-wF-YJp">
-                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XnL-wF-YJp" id="kF2-sj-0Fb">
-                                    <frame key="frameInset" width="375" height="43"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="RWt-mD-zO6" id="GJZ-jy-9fk"/>
-                            <outlet property="delegate" destination="RWt-mD-zO6" id="Bap-ju-dmu"/>
-                        </connections>
-                    </tableView>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="cMZ-BK-iRc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="P2K-4P-2U2" secondAttribute="trailing" id="3Zn-MA-2ba"/>
+                            <constraint firstItem="bw6-fx-Mbe" firstAttribute="top" secondItem="6kk-S0-9Mv" secondAttribute="bottom" id="8i0-ZO-Sln"/>
+                            <constraint firstItem="6kk-S0-9Mv" firstAttribute="leading" secondItem="2sz-Y0-9Xb" secondAttribute="leading" id="8oF-Qc-r4E"/>
+                            <constraint firstItem="6kk-S0-9Mv" firstAttribute="top" secondItem="2sz-Y0-9Xb" secondAttribute="top" id="9Ry-jz-eiT"/>
+                            <constraint firstItem="gcA-l2-bEr" firstAttribute="leading" secondItem="2sz-Y0-9Xb" secondAttribute="leadingMargin" id="9h9-8T-4j7"/>
+                            <constraint firstItem="gcA-l2-bEr" firstAttribute="centerX" secondItem="2sz-Y0-9Xb" secondAttribute="centerX" id="Hlf-YC-0ZM"/>
+                            <constraint firstItem="P2K-4P-2U2" firstAttribute="centerX" secondItem="2sz-Y0-9Xb" secondAttribute="centerX" id="Lc6-Gg-Wqv"/>
+                            <constraint firstItem="gcA-l2-bEr" firstAttribute="trailing" secondItem="2sz-Y0-9Xb" secondAttribute="trailingMargin" id="Tir-SM-p5o"/>
+                            <constraint firstAttribute="trailing" secondItem="6kk-S0-9Mv" secondAttribute="trailing" id="Y5l-hX-82H"/>
+                            <constraint firstItem="P2K-4P-2U2" firstAttribute="top" secondItem="Fmd-Tn-zrT" secondAttribute="bottom" constant="8" id="acF-6N-Z6J"/>
+                            <constraint firstItem="gcA-l2-bEr" firstAttribute="top" secondItem="Fmd-Tn-zrT" secondAttribute="bottom" constant="46" id="nwM-zi-Ie0"/>
+                            <constraint firstItem="P2K-4P-2U2" firstAttribute="leading" secondItem="2sz-Y0-9Xb" secondAttribute="leading" id="puT-Sz-l46"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="searchBar" destination="gcA-l2-bEr" id="irq-Iu-wDg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Tp5-bG-Ee1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="0.0" y="11"/>
+            <point key="canvasLocation" x="45.600000000000001" y="143.47826086956522"/>
         </scene>
     </scenes>
 </document>
