@@ -14,7 +14,6 @@
 		1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */; };
 		1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C31D2D776D0053D167 /* Main.storyboard */; };
 		1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C61D2D776D0053D167 /* Assets.xcassets */; };
-		1F92C7CA1D2D776D0053D167 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */; };
 		1F92C7D51D2D776D0053D167 /* Music_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7D41D2D776D0053D167 /* Music_SearchTests.swift */; };
 		1F92C7E01D2D776E0053D167 /* Music_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */; };
 		2E50CE24A3BC16C7048757B4 /* Pods_Music_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44DF1DB7C65CB98ADFB43BE /* Pods_Music_Search.framework */; };
@@ -49,7 +48,6 @@
 		1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
 		1F92C7C41D2D776D0053D167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F92C7C61D2D776D0053D167 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		1F92C7C91D2D776D0053D167 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1F92C7CB1D2D776D0053D167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1F92C7D01D2D776D0053D167 /* Music SearchTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music SearchTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7D41D2D776D0053D167 /* Music_SearchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SearchTests.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
-				1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */,
 				1F92C7CB1D2D776D0053D167 /* Info.plist */,
 			);
 			path = "Music Search";
@@ -297,7 +294,6 @@
 			files = (
 				1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */,
 				1F2E62F41DA4509400DEFE3D /* View.xib in Resources */,
-				1F92C7CA1D2D776D0053D167 /* LaunchScreen.storyboard in Resources */,
 				1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */,
 				1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */,
 			);
@@ -506,14 +502,6 @@
 				1F92C7C41D2D776D0053D167 /* Base */,
 			);
 			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		1F92C7C81D2D776D0053D167 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				1F92C7C91D2D776D0053D167 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
