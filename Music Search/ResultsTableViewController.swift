@@ -9,56 +9,53 @@
 import UIKit
 import Alamofire
 
-struct CellData {
-    var song: String
-    var artist: String
-    var album: String
-    var image: UIImage
-}
-
 struct ResourceData {
-    var track: String
-    var artist: String
-    var album: String?
-    var resourceID: String
-    var resourceImageURL: URL?
-    var playbackURL: URL?
-    var previewURL: URL?
-    var external_url: URL
-    var popularity: Int
+    let track: String
+    let artist: String
+    let album: String?
+    let resourceID: String
+    let resourceImage: UIImage?
+    let playbackURL: URL?
+    let previewURL: URL?
+    let external_url: URL?
+    let popularity: Int
 }
 
 class ResultsTableViewController: UITableViewController {
     typealias JSONStandard = [String: AnyObject]
     
-    var resultsData = [CellData]()
     var resourceArray = [ResourceData]()
+    var itunesResources = [ResourceData]()
 
     override func viewDidLoad() {
-        callAlamo(url: generateURL(query: "Drake"))
-        resultsData = [CellData(song: "Thief", artist: "Ookay", album:"N/A", image: #imageLiteral(resourceName: "ImagePlaceholder")),
-        CellData(song: "Wicked", artist: "Griz", album:"Good Times Roll", image: #imageLiteral(resourceName: "ImagePlaceholder")),
-        CellData(song: "Hotline Bling", artist: "Drake", album:"Views", image: #imageLiteral(resourceName: "ImagePlaceholder"))]
+        let passedQuery = "lil wayne"
+        callAlamoforSpotify(url: generateSpotifyURL(query: passedQuery))
+        self.tableView.reloadData()
+        callAlamoforiTunes(url: generateiTunesURL(term: passedQuery))
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return resultsData.count
+        return resourceArray.count
     }
     
-    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-        return 3
+//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
+//        <#code#>
+//    }
+    
+//    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
+//        return 3
+//    }
+    
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("ResultTableViewCell", owner: self, options: nil)?.first as! ResultTableViewCell
-        cell.mainImageView.image = resultsData[indexPath.row].image
-        cell.songLabel.text = resultsData[indexPath.row].song
-        cell.artistLabel.text = resultsData[indexPath.row].artist
-        cell.albumLabel.text = resultsData[indexPath.row].album
-//        cell.mainImageView.image = resultsData[indexPath.row].image
-//        cell.songLabel.text = resourceArray[indexPath.row].track
-//        cell.artistLabel.text = resourceArray[indexPath.row].artist
-//        cell.albumLabel.text = resourceArray[indexPath.row].album
+        cell.mainImageView.image = resourceArray[indexPath.row].resourceImage
+        cell.songLabel.text = resourceArray[indexPath.row].track
+        cell.artistLabel.text = resourceArray[indexPath.row].artist
+        cell.albumLabel.text = resourceArray[indexPath.row].album
         return cell
     }
     
@@ -66,26 +63,49 @@ class ResultsTableViewController: UITableViewController {
         return 145
     }
     
-    func generateURL(query: String) -> String {
-//        let queryLimit = 20
-//        let queryURL:URL = URL(fileURLWithPath: "https://api.spotify.com/v1/search?q=\(query)&type=track,artist,album&limit=\(queryLimit)")
-        let q = "https://api.spotify.com/v1/search?q=Drake&type=track,artist,album&limit=20"
-        return q
+    func generateSpotifyURL(query: String) -> String {
+        //TODO: Sanitze queries
+        let sanitizedQuery = query.replacingOccurrences(of: " ", with: "+")
+        let queryLimit = 10
+        let queryURL = "https://api.spotify.com/v1/search?q=\(sanitizedQuery)&type=track,artist,album&limit=\(queryLimit)"
+        //let testURL = "https://api.spotify.com/v1/search?q=Drake&type=track,artist,album&limit=20"
+        return queryURL
     }
     
-    func callAlamo(url: String) {
+    func generateiTunesURL(term: String) -> String {
+        var sanitizedQuery = "https://itunes.apple.com/search?parameterkeyvalue"
+        var searchTerm = "term=\(term)"
+        searchTerm = searchTerm.replacingOccurrences(of: " ", with: "+")
+        let countryCodes = "country=US"
+        let querySearchTypes = "mediaType=music,musicVideo,podcast"
+        let returnTypes = "resultEntity=music,musicVideo,podcast"
+        let queryLimit = "limit=10"
+        
+        sanitizedQuery = sanitizedQuery.replacingOccurrences(of: "parameterkeyvalue", with: "\(searchTerm)&\(countryCodes)&\(querySearchTypes)&\(returnTypes)&\(queryLimit)")
+        print("iTunes search URL: \(sanitizedQuery)\n\n")
+        return sanitizedQuery
+    }
+    
+    
+    
+    func callAlamoforSpotify(url: String) {
         Alamofire.request(url).responseJSON(completionHandler: {
             response in
-            
-            self.parseData(JSONData: response.data!)
-            
+            self.parseSpotifyData(JSONData: response.data!)
         })
     }
     
-    func parseData(JSONData: Data) {
+    func callAlamoforiTunes(url: String) {
+        Alamofire.request(url).responseJSON(completionHandler: {
+            response in
+            self.parseiTunesData(JSONData: response.data!)
+        })
+    }
+    
+    func parseSpotifyData(JSONData: Data) {
         do {
             let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
-            print(readableJSON)
+            //print(readableJSON)
             
             if let tracks = readableJSON["tracks"] as? JSONStandard {
                 if let items  = tracks["items"] {
@@ -95,31 +115,64 @@ class ResultsTableViewController: UITableViewController {
                         let artist = (item["artists"]![0] as! JSONStandard)["name"] as! String
                         let ID = item["id"] as! String
                         let resourceURL = URL(fileURLWithPath: (item["uri"] as! String))
-                        let album = (item["album"] as! JSONStandard)["name"] as! String
-                        let resourceImages = (item["album"] as! JSONStandard)["images"]!
-                        let image = (resourceImages[0] as! JSONStandard)["url"] as! String
-                        let resourceImage = URL(fileURLWithPath: image)
-//                        if let imagesArray = item["images"] {
-//                            resourceImage = URL(fileURLWithPath: ((imagesArray[0] as! JSONStandard)["url"] as! String))
-//                            resourceImage = nil
-//                            print(resourceImage)
-//                        }
                         
-                        let resourcePopularity = item["popularity"] as! Int
-                        let previewURL = URL(fileURLWithPath: (item["preview_url"] as! String))
-                        let externalURL = URL(fileURLWithPath: ((item["external_urls"] as! JSONStandard)["spotify"] as! String))
+                        // Get album name and image URL for track
+                        var album: String? = nil
+                        var unwrappedImage: UIImage? = nil
+                        if let albumField = item["album"] {
+                            album = (albumField as! JSONStandard)["name"] as? String
+                            let imagePool = (albumField as! JSONStandard)["images"]! //Array of returned images
+                            let imageURL = URL(string: ((imagePool[0] as! JSONStandard)["url"] as! String))
+                            unwrappedImage = UIImage(data: NSData(contentsOf: imageURL!) as! Data)
+                        }
+                        //let resourceImages = (item["album"] as! JSONStandard)["images"]!
+                        //let image = (resourceImages[0] as! JSONStandard)["url"] as! String
+                        //let resourceImage = URL(string: image)
+                        let popularity = item["popularity"] as! Int
+                        let previewURL: URL? = URL(fileURLWithPath: (item["preview_url"] as! String)) //Preview stream url
+                        let externalURL: URL? = URL(fileURLWithPath: ((item["external_urls"] as! JSONStandard)["spotify"] as! String)) //Other external urls
                         
-                        self.resourceArray.append(ResourceData(track: track, artist: artist, album: album, resourceID: ID, resourceImageURL: resourceImage, playbackURL: resourceURL, previewURL: previewURL, external_url: externalURL, popularity: resourcePopularity))
-                        print(track)
-                        print(resourceURL)
-                        print(resourcePopularity)
-                        print(previewURL)
-                        print(externalURL)
+                        
+                        self.resourceArray.append(ResourceData(track: track, artist: artist, album: album, resourceID: ID, resourceImage: unwrappedImage, playbackURL: resourceURL, previewURL: previewURL, external_url: externalURL, popularity: popularity))
+                        self.tableView.reloadData()
                         
                     }
                 }
             }
             
+        }
+        catch {
+            print(error)
+        }
+    }
+    
+    func parseiTunesData(JSONData: Data) {
+        do {
+            let readableJSON = try JSONSerialization.jsonObject(with: JSONData, options: .mutableContainers) as! JSONStandard
+            print(readableJSON)
+            
+            if let items = readableJSON["results"] {
+                for i in 0..<items.count {
+                    let item = items[i] as! JSONStandard
+                    let track: String = item["trackName"] as! String
+                    let artist: String = item["artistName"] as! String
+                    var unwrappedImage: UIImage? = nil
+                    if let image = item["artworkUrl100"] {
+                        let imageURL = URL(string: image as! String)
+                        let data = NSData(contentsOf: imageURL!) as! Data
+                        unwrappedImage =  UIImage(data: data)
+                    }
+//                    let isStreamable = (item["isStreamable"] as! Int) == 1 ? true : false
+                    let album: String? = item["collectionCensoredName"] as! String?
+                    let previewURL: URL? = URL(string: item["previewUrl"] as! String)
+                    let trackID = item["trackId"] as! Int
+                    let trackIdAsString = String(trackID)
+//                    let trackDurationInMillis = item["trackTimeMillis"] as! Int
+                    let trackViewURL: URL? = URL(string: item["trackViewUrl"] as! String)
+                    
+                    resourceArray.append(ResourceData(track: track, artist: artist, album: album, resourceID: trackIdAsString, resourceImage: unwrappedImage, playbackURL: nil, previewURL: previewURL, external_url: trackViewURL, popularity: 0))
+                }
+            }
         }
         catch {
             print(error)
