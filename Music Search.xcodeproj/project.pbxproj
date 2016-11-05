@@ -10,7 +10,6 @@
 		053D5C1A1DC9D29500942DD5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D5C191DC9D29500942DD5 /* SettingsViewController.swift */; };
 		05B65C231DC9BF54003B311B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B65C221DC9BF54003B311B /* HomeViewController.swift */; };
 		1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */; };
-		1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */; };
 		1F2E62F41DA4509400DEFE3D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E62F31DA4509400DEFE3D /* View.xib */; };
 		1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */; };
 		1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */; };
@@ -45,7 +44,6 @@
 		053D5C191DC9D29500942DD5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		05B65C221DC9BF54003B311B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = ../ResultTableViewCell.swift; sourceTree = "<group>"; };
-		1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = ../ResultTableViewCell.xib; sourceTree = "<group>"; };
 		1F2E62F31DA4509400DEFE3D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
 		1F92C7BC1D2D776D0053D167 /* Music Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -127,7 +125,6 @@
 				1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */,
 				1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */,
 				05B65C221DC9BF54003B311B /* HomeViewController.swift */,
-				1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
 				053D5C191DC9D29500942DD5 /* SettingsViewController.swift */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
@@ -249,7 +246,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0730;
-				LastUpgradeCheck = 0730;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = Funkadelic;
 				TargetAttributes = {
 					1F92C7BB1D2D776D0053D167 = {
@@ -298,7 +295,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */,
 				1F2E62F41DA4509400DEFE3D /* View.xib in Resources */,
 				1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */,
 				1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */,
@@ -529,8 +525,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -575,8 +573,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -595,6 +595,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
@@ -604,6 +605,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 6A4249A5A9FC13925B2327BA /* Pods-Music Search.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Music Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -617,6 +619,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9065C6A0CC4D85DD864E0004 /* Pods-Music Search.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "Music Search/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
