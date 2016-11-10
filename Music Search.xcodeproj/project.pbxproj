@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		053D5C1A1DC9D29500942DD5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 053D5C191DC9D29500942DD5 /* SettingsViewController.swift */; };
+		059A05F61DD4EF1300D259E3 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 059A05F51DD4EF1300D259E3 /* ResultTableViewCell.xib */; };
 		05B65C231DC9BF54003B311B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 05B65C221DC9BF54003B311B /* HomeViewController.swift */; };
 		1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */; };
 		1F2E62F41DA4509400DEFE3D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E62F31DA4509400DEFE3D /* View.xib */; };
@@ -42,6 +43,7 @@
 /* Begin PBXFileReference section */
 		0153667750E96F1DF21C9805 /* Pods-Music SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		053D5C191DC9D29500942DD5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		059A05F51DD4EF1300D259E3 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ResultTableViewCell.xib; sourceTree = SOURCE_ROOT; };
 		05B65C221DC9BF54003B311B /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = ../ResultTableViewCell.swift; sourceTree = "<group>"; };
 		1F2E62F31DA4509400DEFE3D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
@@ -125,6 +127,7 @@
 				1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */,
 				1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */,
 				05B65C221DC9BF54003B311B /* HomeViewController.swift */,
+				059A05F51DD4EF1300D259E3 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
 				053D5C191DC9D29500942DD5 /* SettingsViewController.swift */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
@@ -297,6 +300,7 @@
 			files = (
 				1F2E62F41DA4509400DEFE3D /* View.xib in Resources */,
 				1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */,
+				059A05F61DD4EF1300D259E3 /* ResultTableViewCell.xib in Resources */,
 				1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
