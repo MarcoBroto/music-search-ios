@@ -29,7 +29,7 @@ class ResultsTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         let passedQuery = "lil wayne"
-        callAlamoforSpotify(url: generateSpotifyURL(query: passedQuery))
+        callAlamoforSpotify(url: generateSpotifyURL(term: passedQuery))
         self.tableView.reloadData()
         callAlamoforiTunes(url: generateiTunesURL(term: passedQuery))
     }
@@ -50,6 +50,10 @@ class ResultsTableViewController: UITableViewController {
         return 1
     }
     
+//    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+//        <#code#>
+//    }
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = Bundle.main.loadNibNamed("ResultTableViewCell", owner: self, options: nil)?.first as! ResultTableViewCell
         cell.mainImageView.image = resourceArray[indexPath.row].resourceImage
@@ -63,9 +67,9 @@ class ResultsTableViewController: UITableViewController {
         return 145
     }
     
-    func generateSpotifyURL(query: String) -> String {
-        //TODO: Sanitze queries
-        let sanitizedQuery = query.replacingOccurrences(of: " ", with: "+")
+    func generateSpotifyURL(term: String) -> String {
+        //TODO: Sanitize spotify queries
+        let sanitizedQuery = term.replacingOccurrences(of: " ", with: "+")
         let queryLimit = 10
         let queryURL = "https://api.spotify.com/v1/search?q=\(sanitizedQuery)&type=track,artist,album&limit=\(queryLimit)"
         //let testURL = "https://api.spotify.com/v1/search?q=Drake&type=track,artist,album&limit=20"
@@ -73,6 +77,7 @@ class ResultsTableViewController: UITableViewController {
     }
     
     func generateiTunesURL(term: String) -> String {
+        //TODO: Sanitize itunes queries
         var sanitizedQuery = "https://itunes.apple.com/search?parameterkeyvalue"
         var searchTerm = "term=\(term)"
         searchTerm = searchTerm.replacingOccurrences(of: " ", with: "+")
@@ -86,7 +91,18 @@ class ResultsTableViewController: UITableViewController {
         return sanitizedQuery
     }
     
+    //TODO: Implement Youtube Api to generate youtube search query
+    func generateYouTubeURL(term: String) -> String {
+        
+        return ""
+    }
     
+    //TODO: Implement SoundCloud Api, might need to use javascript
+    func generateSoundCloudURL(term: String) -> String {
+        
+        return ""
+    }
+
     
     func callAlamoforSpotify(url: String) {
         Alamofire.request(url).responseJSON(completionHandler: {
