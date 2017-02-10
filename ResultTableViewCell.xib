@@ -1,8 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -14,26 +17,27 @@
             <rect key="frame" x="0.0" y="0.0" width="386" height="146"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="386" height="145"/>
+                <rect key="frame" x="0.0" y="0.0" width="386" height="145.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Qyq-Ed-Q4c">
+                        <rect key="frame" x="0.0" y="-1" width="146" height="146"/>
                         <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Artist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eQw-uy-B6A">
-                        <color key="backgroundColor" red="0.67664584910000003" green="1" blue="0.60645484910000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="154" y="37" width="224" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C2n-fc-O3g">
-                        <color key="backgroundColor" red="0.67664584910000003" green="1" blue="0.60645484910000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="154" y="8" width="224" height="21.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Album" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ocj-Ak-fjy">
-                        <color key="backgroundColor" red="0.67664584910000003" green="1" blue="0.60645484910000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <rect key="frame" x="154" y="62" width="224" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -49,10 +53,10 @@
                     <constraint firstItem="Qyq-Ed-Q4c" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="-8" id="RyP-bm-XS0"/>
                     <constraint firstAttribute="trailingMargin" secondItem="eQw-uy-B6A" secondAttribute="trailing" id="Uwd-sn-knr"/>
                     <constraint firstItem="eQw-uy-B6A" firstAttribute="leading" secondItem="Qyq-Ed-Q4c" secondAttribute="trailing" constant="8" id="XbR-PS-ABu"/>
-                    <constraint firstItem="eQw-uy-B6A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="ZE4-EW-4bE"/>
-                    <constraint firstItem="eQw-uy-B6A" firstAttribute="top" secondItem="C2n-fc-O3g" secondAttribute="bottom" constant="33" id="cFd-Al-TqO"/>
+                    <constraint firstItem="eQw-uy-B6A" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" constant="-25.5" id="ZE4-EW-4bE"/>
+                    <constraint firstItem="eQw-uy-B6A" firstAttribute="top" secondItem="C2n-fc-O3g" secondAttribute="bottom" constant="7.5" id="cFd-Al-TqO"/>
                     <constraint firstItem="C2n-fc-O3g" firstAttribute="leading" secondItem="Qyq-Ed-Q4c" secondAttribute="trailing" constant="8" id="cvL-F9-eOa"/>
-                    <constraint firstItem="Ocj-Ak-fjy" firstAttribute="top" secondItem="eQw-uy-B6A" secondAttribute="bottom" constant="33" id="eHK-8R-jlV"/>
+                    <constraint firstItem="Ocj-Ak-fjy" firstAttribute="top" secondItem="eQw-uy-B6A" secondAttribute="bottom" constant="4.5" id="eHK-8R-jlV"/>
                     <constraint firstAttribute="bottomMargin" secondItem="Qyq-Ed-Q4c" secondAttribute="bottom" constant="-7.5" id="zGk-9C-jlC"/>
                 </constraints>
             </tableViewCellContentView>

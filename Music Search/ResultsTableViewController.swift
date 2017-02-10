@@ -30,8 +30,10 @@ class ResultsTableViewController: UITableViewController {
     override func viewDidLoad() {
         let passedQuery = "lil wayne"
         callAlamoforSpotify(url: generateSpotifyURL(term: passedQuery))
-        self.tableView.reloadData()
+//        self.tableView.reloadData()
         callAlamoforiTunes(url: generateiTunesURL(term: passedQuery))
+        self.tableView.reloadData()
+        printURL()
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,6 +47,18 @@ class ResultsTableViewController: UITableViewController {
 //    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
 //        return 3
 //    }
+    
+    
+    
+    @IBAction func SwipeResultLeft(_ sender: UISwipeGestureRecognizer) {
+        
+        print("hello World")
+    
+    }
+    
+    
+    
+    
     
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -192,6 +206,16 @@ class ResultsTableViewController: UITableViewController {
         }
         catch {
             print(error)
+        }
+    }
+    
+    func printURL() {
+        print("\n----------")
+        let x = Bundle.main.debugDescription
+        print(x)
+        let resUrl = Bundle.allBundles
+        for i in resUrl {
+            print(i.debugDescription)
         }
     }
 }
