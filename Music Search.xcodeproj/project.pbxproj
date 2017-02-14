@@ -10,6 +10,7 @@
 		1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */; };
 		1F24946B1DB49CAA0070F556 /* ResultTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */; };
 		1F2E62F41DA4509400DEFE3D /* View.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1F2E62F31DA4509400DEFE3D /* View.xib */; };
+		1F76FC931E530A8200C4EB6F /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F76FC921E530A8200C4EB6F /* SearchViewController.swift */; };
 		1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */; };
 		1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */; };
 		1F92C7C51D2D776D0053D167 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C31D2D776D0053D167 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = ../ResultTableViewCell.swift; sourceTree = "<group>"; };
 		1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = ../ResultTableViewCell.xib; sourceTree = "<group>"; };
 		1F2E62F31DA4509400DEFE3D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		1F76FC921E530A8200C4EB6F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		1F92C7BC1D2D776D0053D167 /* Music Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsTableViewController.swift; sourceTree = "<group>"; };
@@ -97,7 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				1F2E62F31DA4509400DEFE3D /* View.xib */,
-				1F92C7BE1D2D776D0053D167 /* Music Search */,
+				1F92C7BE1D2D776D0053D167 /* Music Search UI */,
 				1F92C7D31D2D776D0053D167 /* Music SearchTests */,
 				1F92C7DE1D2D776D0053D167 /* Music SearchUITests */,
 				1F92C7BD1D2D776D0053D167 /* Products */,
@@ -116,9 +118,10 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F92C7BE1D2D776D0053D167 /* Music Search */ = {
+		1F92C7BE1D2D776D0053D167 /* Music Search UI */ = {
 			isa = PBXGroup;
 			children = (
+				1F76FC921E530A8200C4EB6F /* SearchViewController.swift */,
 				1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */,
 				1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */,
 				1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */,
@@ -127,6 +130,7 @@
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
 				1F92C7CB1D2D776D0053D167 /* Info.plist */,
 			);
+			name = "Music Search UI";
 			path = "Music Search";
 			sourceTree = "<group>";
 		};
@@ -460,6 +464,7 @@
 			files = (
 				1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */,
 				1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */,
+				1F76FC931E530A8200C4EB6F /* SearchViewController.swift in Sources */,
 				1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
