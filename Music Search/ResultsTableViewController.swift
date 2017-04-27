@@ -26,38 +26,19 @@ class ResultsTableViewController: UITableViewController {
     
     var resourceArray = [ResourceData]()
     var itunesResources = [ResourceData]()
+    var passedQuery = "Porter Robinson"
 
     override func viewDidLoad() {
-        let passedQuery = "lil wayne"
         callAlamoforSpotify(url: generateSpotifyURL(term: passedQuery))
 //        self.tableView.reloadData()
         callAlamoforiTunes(url: generateiTunesURL(term: passedQuery))
         self.tableView.reloadData()
         printURL()
     }
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resourceArray.count
     }
-    
-//    override func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-//        <#code#>
-//    }
-    
-//    override func tableView(_ tableView: UITableView, sectionForSectionIndexTitle title: String, at index: Int) -> Int {
-//        return 3
-//    }
-    
-    
-    
-    @IBAction func SwipeResultLeft(_ sender: UISwipeGestureRecognizer) {
-        
-        print("hello World")
-    
-    }
-    
-    
-    
     
     
     override func numberOfSections(in tableView: UITableView) -> Int {

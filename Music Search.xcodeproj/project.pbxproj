@@ -17,6 +17,7 @@
 		1F92C7C71D2D776D0053D167 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1F92C7C61D2D776D0053D167 /* Assets.xcassets */; };
 		1F92C7D51D2D776D0053D167 /* Music_SearchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7D41D2D776D0053D167 /* Music_SearchTests.swift */; };
 		1F92C7E01D2D776E0053D167 /* Music_SearchUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */; };
+		1FE3A0A01E5D016400550EC5 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FE3A09F1E5D016400550EC5 /* SettingsViewController.swift */; };
 		2E50CE24A3BC16C7048757B4 /* Pods_Music_Search.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E44DF1DB7C65CB98ADFB43BE /* Pods_Music_Search.framework */; };
 		AFA663A281294AFF3B0C78C7 /* Pods_Music_SearchTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 27F246A7E3CE1AF6C4749785 /* Pods_Music_SearchTests.framework */; };
 		BD5CBACB9200E92850AC320B /* Pods_Music_SearchUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 23215111F642463127B247F9 /* Pods_Music_SearchUITests.framework */; };
@@ -43,7 +44,7 @@
 		0153667750E96F1DF21C9805 /* Pods-Music SearchUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchUITests/Pods-Music SearchUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ResultTableViewCell.swift; path = ../ResultTableViewCell.swift; sourceTree = "<group>"; };
 		1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ResultTableViewCell.xib; path = ../ResultTableViewCell.xib; sourceTree = "<group>"; };
-		1F2E62F31DA4509400DEFE3D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = View.xib; sourceTree = "<group>"; };
+		1F2E62F31DA4509400DEFE3D /* View.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = View.xib; path = ../View.xib; sourceTree = "<group>"; };
 		1F76FC921E530A8200C4EB6F /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SearchViewController.swift; path = ../SearchViewController.swift; sourceTree = "<group>"; };
 		1F92C7BC1D2D776D0053D167 /* Music Search.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Music Search.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -57,6 +58,7 @@
 		1F92C7DB1D2D776D0053D167 /* Music SearchUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Music SearchUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1F92C7DF1D2D776E0053D167 /* Music_SearchUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Music_SearchUITests.swift; sourceTree = "<group>"; };
 		1F92C7E11D2D776E0053D167 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		1FE3A09F1E5D016400550EC5 /* SettingsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		23215111F642463127B247F9 /* Pods_Music_SearchUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_SearchUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		27F246A7E3CE1AF6C4749785 /* Pods_Music_SearchTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Music_SearchTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		40A437E0A0D22B527F21BCBB /* Pods-Music SearchTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Music SearchTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Music SearchTests/Pods-Music SearchTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -98,8 +100,7 @@
 		1F92C7B31D2D776D0053D167 = {
 			isa = PBXGroup;
 			children = (
-				1F2E62F31DA4509400DEFE3D /* View.xib */,
-				1F92C7BE1D2D776D0053D167 /* Music Search UI */,
+				1F92C7BE1D2D776D0053D167 /* Monarch UI */,
 				1F92C7D31D2D776D0053D167 /* Music SearchTests */,
 				1F92C7DE1D2D776D0053D167 /* Music SearchUITests */,
 				1F92C7BD1D2D776D0053D167 /* Products */,
@@ -118,19 +119,21 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		1F92C7BE1D2D776D0053D167 /* Music Search UI */ = {
+		1F92C7BE1D2D776D0053D167 /* Monarch UI */ = {
 			isa = PBXGroup;
 			children = (
+				1F2E62F31DA4509400DEFE3D /* View.xib */,
 				1F76FC921E530A8200C4EB6F /* SearchViewController.swift */,
 				1F92C7BF1D2D776D0053D167 /* AppDelegate.swift */,
 				1F92C7C11D2D776D0053D167 /* ResultsTableViewController.swift */,
 				1F2494681DB49CAA0070F556 /* ResultTableViewCell.swift */,
+				1FE3A09F1E5D016400550EC5 /* SettingsViewController.swift */,
 				1F2494691DB49CAA0070F556 /* ResultTableViewCell.xib */,
 				1F92C7C31D2D776D0053D167 /* Main.storyboard */,
 				1F92C7C61D2D776D0053D167 /* Assets.xcassets */,
 				1F92C7CB1D2D776D0053D167 /* Info.plist */,
 			);
-			name = "Music Search UI";
+			name = "Monarch UI";
 			path = "Music Search";
 			sourceTree = "<group>";
 		};
@@ -465,6 +468,7 @@
 				1F92C7C21D2D776D0053D167 /* ResultsTableViewController.swift in Sources */,
 				1F92C7C01D2D776D0053D167 /* AppDelegate.swift in Sources */,
 				1F76FC931E530A8200C4EB6F /* SearchViewController.swift in Sources */,
+				1FE3A0A01E5D016400550EC5 /* SettingsViewController.swift in Sources */,
 				1F24946A1DB49CAA0070F556 /* ResultTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
