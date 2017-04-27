@@ -140,7 +140,11 @@ class ResultsTableViewController: UITableViewController {
                         //let image = (resourceImages[0] as! JSONStandard)["url"] as! String
                         //let resourceImage = URL(string: image)
                         let popularity = item["popularity"] as! Int
-                        let previewURL: URL? = URL(fileURLWithPath: (item["preview_url"] as! String)) //Preview stream url
+                        var previewURL: URL?
+                        if let urlString = item["previewUrl"] as! String? {
+                            previewURL = URL(string: urlString)
+                        }
+//                        let previewURL: URL? = URL(fileURLWithPath: (item["preview_url"] as! String)) //Preview stream url
                         let externalURL: URL? = URL(fileURLWithPath: ((item["external_urls"] as! JSONStandard)["spotify"] as! String)) //Other external urls
                         
                         
@@ -175,7 +179,11 @@ class ResultsTableViewController: UITableViewController {
                     }
 //                    let isStreamable = (item["isStreamable"] as! Int) == 1 ? true : false
                     let album: String? = item["collectionCensoredName"] as! String?
-                    let previewURL: URL? = URL(string: item["previewUrl"] as! String)
+                    var previewURL: URL?
+                    if let urlString = item["previewUrl"] as! String? {
+                        previewURL = URL(string: urlString)
+                    }
+//                    let previewURL: URL? = URL(string: item["previewUrl"] as! String)
                     let trackID = item["trackId"] as! Int
                     let trackIdAsString = String(trackID)
 //                    let trackDurationInMillis = item["trackTimeMillis"] as! Int
