@@ -26,7 +26,7 @@ class ResultsTableViewController: UITableViewController {
     
     var resourceArray = [ResourceData]()
     var itunesResources = [ResourceData]()
-    var passedQuery = "Porter Robinson"
+    var passedQuery = ""
 
     override func viewDidLoad() {
         callAlamoforSpotify(url: generateSpotifyURL(term: passedQuery))
@@ -34,7 +34,12 @@ class ResultsTableViewController: UITableViewController {
         callAlamoforiTunes(url: generateiTunesURL(term: passedQuery))
         self.tableView.reloadData()
         printURL()
+        navigationController?.navigationBar.isHidden = false
     }
+    
+//    override func viewWillAppear(_ animated: Bool) {
+//        navigationController?.navigationBar.isHidden = false
+//    }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return resourceArray.count

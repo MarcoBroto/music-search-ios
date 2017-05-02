@@ -14,9 +14,17 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var searchBar: UITextField!
     
+    override func viewWillAppear(_ animated: Bool) {
+        navigationController?.navigationBar.isHidden = true
+    }
+    
     override func viewDidLoad() {
         searchBar.delegate = self
     }
+    
+//    override func viewWillDisappear(_ animated: Bool) {
+//        navigationController?.navigationBar.isHidden = false
+//    }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         searchBar.resignFirstResponder()
@@ -35,7 +43,12 @@ class SearchViewController: UIViewController, UITextFieldDelegate {
 
     }
     
+    func textFieldDidBeginEditing(_ textField: UITextField) {
+        searchBar.textAlignment = NSTextAlignment.left
+    }
+    
     func textFieldDidEndEditing(_ textField: UITextField) {
+        searchBar.textAlignment = NSTextAlignment.center
         print("Done editing")
     }
 

@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ySh-6f-bDo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ySh-6f-bDo">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -25,7 +26,7 @@
             </objects>
             <point key="canvasLocation" x="-1966" y="9"/>
         </scene>
-        <!--Monarch-->
+        <!--Search View Controller-->
         <scene sceneID="Ydc-Xp-6k5">
             <objects>
                 <viewController storyboardIdentifier="SearchVIew" id="ojn-s7-7Tk" customClass="SearchViewController" customModule="Music_Search" customModuleProvider="target" sceneMemberID="viewController">
@@ -37,36 +38,44 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Search" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iC7-wm-cfC">
-                                <rect key="frame" x="16" y="134" width="343" height="57"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Search" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="iC7-wm-cfC">
+                                <rect key="frame" x="16" y="134" width="343" height="50"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.95709134620000003" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="fVz-KX-DXC"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="words"/>
                             </textField>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Monarch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPK-Q8-ggp">
-                                <rect key="frame" x="16" y="72" width="343" height="54"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Monarch" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPK-Q8-ggp">
+                                <rect key="frame" x="140.5" y="82" width="94" height="29"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" title="Monarch" id="GDw-hg-paQ">
-                        <barButtonItem key="backBarButtonItem" title="Back" id="IzW-Qy-Znm"/>
-                        <barButtonItem key="rightBarButtonItem" image="Settings Icon" style="plain" id="saE-zD-g7T">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mhx-KA-z9y">
-                                <rect key="frame" x="257" y="-2" width="102" height="48"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gaj-Zv-6qZ">
+                                <rect key="frame" x="279.5" y="72" width="48" height="48"/>
                                 <state key="normal" image="Settings Icon"/>
                                 <connections>
-                                    <segue destination="PNi-k2-o7i" kind="presentation" id="VJl-hl-ye7"/>
+                                    <segue destination="PNi-k2-o7i" kind="presentation" id="hNP-Yz-HBr"/>
                                 </connections>
                             </button>
-                        </barButtonItem>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.72071663419999998" blue="0.30406855430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="iC7-wm-cfC" secondAttribute="trailing" id="4hG-oA-JCG"/>
+                            <constraint firstItem="OPK-Q8-ggp" firstAttribute="centerX" secondItem="iwH-is-D85" secondAttribute="centerX" id="Az6-eH-Qbw"/>
+                            <constraint firstItem="iC7-wm-cfC" firstAttribute="top" secondItem="OPK-Q8-ggp" secondAttribute="bottom" constant="23" id="Ciz-8R-zAf"/>
+                            <constraint firstItem="iC7-wm-cfC" firstAttribute="centerX" secondItem="iwH-is-D85" secondAttribute="centerX" id="Lar-ya-7LT"/>
+                            <constraint firstItem="gaj-Zv-6qZ" firstAttribute="leading" secondItem="OPK-Q8-ggp" secondAttribute="trailing" constant="45" id="XgZ-UT-sAy"/>
+                            <constraint firstItem="gaj-Zv-6qZ" firstAttribute="top" secondItem="gCy-PA-0cR" secondAttribute="bottom" constant="8" id="dJn-SM-Af2"/>
+                            <constraint firstItem="OPK-Q8-ggp" firstAttribute="top" secondItem="gCy-PA-0cR" secondAttribute="bottom" constant="18" id="dNc-Il-Rhe"/>
+                            <constraint firstItem="iC7-wm-cfC" firstAttribute="leading" secondItem="iwH-is-D85" secondAttribute="leadingMargin" id="k2I-sr-yeI"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="GDw-hg-paQ">
+                        <barButtonItem key="backBarButtonItem" title="Back" id="IzW-Qy-Znm"/>
                     </navigationItem>
                     <connections>
                         <outlet property="searchBar" destination="iC7-wm-cfC" id="HsG-Hh-InR"/>
@@ -99,7 +108,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XnL-wF-YJp" id="kF2-sj-0Fb">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                                 <gestureRecognizers/>
